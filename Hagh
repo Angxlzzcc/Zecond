@@ -1,0 +1,275 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/thanhdat4461/OrionMoblie/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "ZZZZ-DahoodScript", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+OrionLib:MakeNotification({
+	Name = "Hello",
+	Content = "Welcome To ZZZZ-DahoodScript!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
+
+--[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
+
+local MainTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+MainTab:AddButton({
+	Name = "Desnyc Resolver",
+	Callback = function()
+      		getgenv().VelocityChanger = true
+getgenv().Velocity = Vector3.new(0,-500,0)
+
+local Players     = game:GetService("Players")
+local RunService  = game:GetService("RunService")
+
+local LocalPlayer = Players.LocalPlayer
+local Character   = LocalPlayer.Character
+local RootPart    = Character:FindFirstChild("HumanoidRootPart")
+
+local Heartbeat, RStepped, Stepped = RunService.Heartbeat, RunService.RenderStepped, RunService.Stepped
+
+LocalPlayer.CharacterAdded:Connect(function(NewCharacter)
+   Character = NewCharacter
+end)
+
+local RVelocity, YVelocity = nil, 0.1
+
+while true do
+   if VelocityChanger then
+       if (not RootPart) or (not RootPart.Parent) or (not RootPart.Parent.Parent) then
+           warn("weird ahh died")
+           RootPart = Character:FindFirstChild("HumanoidRootPart")
+       else
+           RVelocity = RootPart.Velocity
+   
+           RootPart.Velocity = type(Velocity) == "vector" and Velocity or Velocity(RVelocity)
+       
+           RStepped:wait()
+       
+           RootPart.Velocity = RVelocity
+       end
+   end
+   
+   Heartbeat:wait()
+end
+OrionLib:MakeNotification({
+	Name = "Button Clicked!",
+	Content = "Button = Desnyc Resolver Clicked!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+MainTab:AddButton({
+	Name = "AntiLock For Mobile",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/7iJ2yQGf"))()
+      OrionLib:MakeNotification({
+	Name = "Button Clicked!",
+	Content = "Button = AntiLock For mobile Clicked!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+MainTab:AddButton({
+	Name = "Imperial",
+	Callback = function()
+      	loadstring(game:HttpGet("https://raw.githubusercontent.com/Angxlzzcc/Hi/main/Imperial"))()
+      OrionLib:MakeNotification({
+	Name = "Button Clicked!",
+	Content = "Button = Imperial Clicked!",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+
+--[[
+Title = <string> - The title of the notification.
+Content = <string> - The content of the notification.
+Image = <string> - The icon of the notification.
+Time = <number> - The duration of the notfication.
+]]
+  	end     
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]] 
+
+MainTab:AddButton({
+	Name = "Resolver (OP)",
+	Callback = function()
+      		while true do
+    heartbeat:Wait()
+    if target == true then
+        local character = game.Players[targetplr].Character.HumanoidRootPart
+        local lastPosition = character.Position
+        task.wait()
+        local currentPosition = character.Position
+        local velocity = (currentPosition - lastPosition) * 0
+        character.AssemblyLinerVelocity = velocity
+        character.Velocity = velocity
+    end
+end
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+MainTab:AddButton({
+	Name = "Zombie Anim",
+	Callback = function()
+      		while true do
+local Animate = game.Players.LocalPlayer.Character.Animate
+Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=616168032"
+Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=616163682"
+game.Players.LocalPlayer.Character.Humanoid.Jump = false
+wait(1)
+end
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+MainTab:AddButton({
+	Name = "Macro",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/DHBCommunity/DHBOfficialScript/main/macromobbyballigusapo"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+MainTab:AddButton({
+	Name = "Sky AntiLock!",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/UiRbudnK"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+MainTab:AddButton({
+	Name = "AntiLockV2",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/wenny69420/KirbswareScripts/main/MobileV3'))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+MainTab:AddButton({
+	Name = "Fps Spoofer",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/RCgHcY4f"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+MainTab:AddButton({
+	Name = "Looten",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/Angxlzzcc/Lil/main/Pillar"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+MainTab:AddButton({
+	Name = "DesyncV2",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/XsEn1RkF",true))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+MainTab:AddButton({
+	Name = "Camlock",
+	Callback = function()
+      		loadstring(game:HttpGet("https://pastebin.com/raw/PmWCzpgr"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
